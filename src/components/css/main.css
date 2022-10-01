@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    padding: 0 auto;   
+}
+
+.img {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    max-width: 80vw;
+    max-height: 150px !important; 
+}
+  
+.rechazado{
+    color: red;
+}
+
+.mensaje{
+    text-align: center;
+}
+
+.container{
+    width: 60%; 
+}
+
+.colorjadal{
+    background: #081846 !important;  
+}
+
+.footer{
+    position: absolute; 
+    border:1px solid #000;
+    background:#616161;
+    width: 100%;
+    height: 54px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.footer>p{
+    padding: 10px;
+    color: rgb(19, 132, 150);
+}
+
+.footer>p>a{
+    text-decoration:none;
+    color: rgb(19, 132, 150);
+    
+}
+
+.datePicker {
+    width: 100%;
+  }
