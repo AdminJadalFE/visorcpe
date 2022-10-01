@@ -5,10 +5,7 @@ import '../components/css/main.css';
 
 export const ResultView = () => {
     const { cpe } = useContext(CpeContext); 
-
-    console.log("ResultView", cpe)
-    console.log("ResultView", cpe)
-
+  
     return (
         <div className="d-flex justify-content-center">
             <div style={{width: '600px', marginTop: '0.5rem', marginBottom: '0.5rem'}}>

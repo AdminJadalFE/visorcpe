@@ -8,8 +8,7 @@ const CpeContextProvider = (props) => {
     const [cpe, setCpe] = useState(null);
 
     const setDataCpe = (cpe) => {
-        setCpe(cpe);  
-        console.log(history)
+        setCpe(cpe);   
         return history.push('/visorcpe/result');
     }
 

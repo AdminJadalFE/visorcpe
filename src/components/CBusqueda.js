@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';  
 import { CpeContext } from '../context/cpeContext';
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { getCPE, getTipoCPE, getTipoDOC } from '../services/service';
 import Swal from 'sweetalert2';
 import DatePicker from "react-datepicker";
@@ -9,12 +9,13 @@ import './css/main.css';
 import es from 'date-fns/locale/es';
 import { registerLocale } from  "react-datepicker";
 import moment from 'moment'; 
+ 
 
 registerLocale('es', es)
 
 export const CBusqueda = () => {
     const { setDataCpe } = useContext(CpeContext);
-    let { register, handleSubmit, errors} = useForm(); 
+    let { register, handleSubmit, errors, control} = useForm(); 
 
     const [tipoCPE, setTipoCPE] = useState([]); 
     const [tipoDOC, setTipoDOC] = useState([]); 
@@ -213,6 +214,7 @@ export const CBusqueda = () => {
                                     <label htmlFor="fechaCpe">Fecha del Comprobante:</label>
 
                                     <div className="input-group">
+  
                                         <DatePicker 
                                             className="form-control"
                                             id="fechaCpe"
@@ -221,10 +223,9 @@ export const CBusqueda = () => {
                                             selected={startDate} 
                                             onChange={date => setStartDate(date)} 
                                             locale="es"
-                                            dateFormat= "yyyy-MM-dd"
-                                            ref={register({required:true})}
-                                        />
-  
+                                            dateFormat= "yyyy-MM-dd" 
+                                        /> 
+ 
                                         {errors.fechaCpe && errors.fechaCpe.type === 'required' && (
                                         <small className="text-danger font-weight-bold">Debe ingresar la Fecha del Comprobante</small>
                                         )}
