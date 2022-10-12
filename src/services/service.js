@@ -20,5 +20,6 @@ export const getTipoDOC = async () => {
 
 export const getCPE = async (data) => { 
     let content = await FetchConf('searchcpe','POST',data);
+    console.log(content)
     return content;
 }

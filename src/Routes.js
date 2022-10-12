@@ -9,7 +9,8 @@ export default function Routes() {
     return (
         <div className="d-flex flex-column">
             <Route exac path="/visorcpe" component={HomeView} />
-            <ProtectedRoute exact path="/visorcpe/result" component={ResultView} /> 
+            <Route exac path="/result" component={ResultView} />
+            {/* <ProtectedRoute exact path="/visorcpe/result" component={ResultView} />  */}
         </div>
     )
 }

@@ -9,7 +9,7 @@ const CpeContextProvider = (props) => {
 
     const setDataCpe = (cpe) => {
         setCpe(cpe);   
-        return history.push('/visorcpe/result');
+        return history.push('/result');
     }
 
     return(

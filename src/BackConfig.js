@@ -1,4 +1,4 @@
-export const URL_BACK = 'https://apitest.jadalfe.pe/api/cpe/';
+export const URL_BACK = 'http://k8s-default-jadalfet-cf91b6022a-2120898865.us-east-1.elb.amazonaws.com/api/cpe/';
 
 export const FetchGet = async (endpoint) => { 
     const response = await fetch(URL_BACK + endpoint);
